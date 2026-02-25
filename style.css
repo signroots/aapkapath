@@ -1,0 +1,106 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Body */
+/* Body with Background Image */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #000000;
+  position: relative;
+
+  background: url("bg.jpg") center center / cover no-repeat;
+}
+/* Layout */
+.container {
+  max-width: 700px;
+  padding: 40px 25px;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Logo */
+.logo {
+  width: 300px;
+  margin-bottom: 30px;
+  animation: pulse 3s infinite;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0d4f8b;
+  margin-bottom: 20px;
+}
+
+/* Divider */
+.line {
+  width: 80px;
+  height: 3px;
+  background: #e50914;
+  margin: 20px auto;
+}
+
+/* Description */
+.desc {
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* Status badge */
+.status {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #e50914;
+  color: #e50914;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  color: #2c1111;
+  font-size: 0.75rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .logo {
+    width: 200px;
+  }
+
+  .tagline {
+    font-size: 1.8rem;
+  }
+}
